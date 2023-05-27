@@ -1,0 +1,24 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Sexo</th>
+      <th scope="col">Email</th>
+      <th scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let persona of personal">
+      <td>{{persona.id}}</td>
+      <td>{{persona.name}}</td>
+      <td>{{persona.surname}}</td>
+      <td>{{persona.phone}}</td>
+      <td>{{persona.sexo}}</td>
+      <td>{{persona.email}}</td>
+      <td><button class="btn btn-outline-danger" (click)="borrar(persona.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>

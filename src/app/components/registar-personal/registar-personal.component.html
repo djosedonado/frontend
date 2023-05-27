@@ -1,0 +1,105 @@
+<div class="row">
+  <div class="col-sm-4 offset-md-4">
+    <div class="card card-bady">
+      <form (ngSubmit)="submitPersona()" novalidate #f="ngForm">
+        <div *ngIf="myImage" class="p-5">
+          <img
+            [src]="myImage"
+            class="card-img-top"
+            width="200px"
+            height="200"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="documento"
+            name="documento"
+            [(ngModel)]="personal.id"
+            class="form-control"
+            required
+            autocomplete="off"
+            autofocus
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="personal.name"
+            class="form-control"
+            placeholder="Nombre"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="surname"
+            [(ngModel)]="personal.surname"
+            class="form-control"
+            placeholder="Apellido"
+            autofocus
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            [(ngModel)]="personal.sexo"
+            name="sexo"
+            required
+            autocomplete="off"
+          >
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="phone"
+            [(ngModel)]="personal.phone"
+            class="form-control"
+            placeholder="Telefono"
+            autofocus
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            name="email"
+            [(ngModel)]="personal.email"
+            class="form-control"
+            placeholder="Correo"
+            autofocus
+            required
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="file"
+            (change)="onChange($event)"
+            placeholder="Seleccione Imagen"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-outline-success btn-block"
+          [disabled]="!f.valid"
+        >
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
