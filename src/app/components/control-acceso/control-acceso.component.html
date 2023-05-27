@@ -34,7 +34,7 @@
             placeholder="Apellido"
             autofocus
             required
-          autocomplete="off"
+            autocomplete="off"
           />
         </div>
         <div class="form-group">
@@ -44,7 +44,7 @@
             [(ngModel)]="personal.sexo"
             name="sexo"
             required
-          autocomplete="off"
+            autocomplete="off"
           >
             <option value="Masculino">Masculino</option>
             <option value="Femenino">Femenino</option>
@@ -60,7 +60,7 @@
             placeholder="Telefono"
             autofocus
             required
-          autocomplete="off"
+            autocomplete="off"
           />
         </div>
         <div class="form-group">
@@ -72,8 +72,11 @@
             placeholder="Correo"
             autofocus
             required
-          autocomplete="off"
+            autocomplete="off"
           />
+        </div>
+        <div class="p-2">
+          <a routerLink="/personal/fromRegister">Registrate Aqui</a>
         </div>
         <button
           type="submit"

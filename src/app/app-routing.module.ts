@@ -3,12 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { ControlAccesoComponent } from './components/control-acceso/control-acceso.component';
 import { RegistarPersonalComponent } from './components/registar-personal/registar-personal.component';
 import { ListarPersonalComponent } from './components/listar-personal/listar-personal.component';
-import {HeaderComponent} from './header/header.component';
 
 const routes: Routes = [
   {
-    path:'personal/listarPersonal',
-    component: ControlAccesoComponent
+    path: 'personal/listarPersonal',
+    component: ListarPersonalComponent,
   },
   {
     path: 'personal/fromRegister',
@@ -16,11 +15,13 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: ListarPersonalComponent,
+    component: ControlAccesoComponent,
   },
   {
-    path: '', redirectTo: '', pathMatch: 'full'
-  }
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
